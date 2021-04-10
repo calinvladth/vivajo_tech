@@ -1,0 +1,104 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: $header_size
+
+    padding: 0 $header_size
+
+    display: grid
+    grid-template-columns: auto 1fr auto
+    grid-gap: 3rem
+
+    position: relative
+    z-index: 40
+
+    * span
+        font-size: 1.4rem
+
+    > div
+//border: .1rem solid $black
+
+
+.logo
+    width: auto
+    height: auto
+    display: flex
+    align-items: center
+
+    > div
+        width: 100%
+        height: 3rem
+
+
+.lang
+    width: auto
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    > div
+        border: .1rem solid $grey
+        border-radius: $radius
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        > span
+            display: block
+            padding: .5rem
+            line-height: 1.4rem
+            cursor: pointer
+
+            text-transform: uppercase
+
+            &:hover
+                color: $grey
+                background-color: $grey_light
+
+            &:nth-child(1)
+                border-right: .1rem solid $grey
+
+.langActive
+    color: $grey
+    background-color: $grey_light
+
+.links
+    width: 100%
+    height: auto
+
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    stroke: $grey
+
+    > div
+        cursor: pointer
+        height: 100%
+
+        margin-left: 2rem
+
+        display: flex
+        align-items: center
+
+        &:hover
+            color: $grey
+
+        &:nth-child(1)
+            margin-left: 0
+
+        > span
+            display: flex
+            justify-content: flex-start
+            align-items: center
+
+            > span
+                $size: 2rem
+                width: $size
+                height: $size
+                margin-left: .25rem
+

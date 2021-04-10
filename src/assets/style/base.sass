@@ -1,0 +1,57 @@
+@import "variables"
+*,
+*::after,
+*::before
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+
+
+html
+    $font_size: 10px
+    font-size: $font_size
+    font-family: $font
+    scroll-behavior: smooth
+
+
+body
+    background-color: $white
+    font-weight: 400
+    overflow-x: hidden
+    box-sizing: border-box
+    cursor: auto
+    font-style: normal
+    font-size: 1.5rem
+
+
+// Typography
+a,
+a:link,
+a:active,
+a:hover
+    cursor: pointer
+    text-decoration: none
+    color: $black
+    z-index: 500
+
+button
+    font-size: 1.2rem
+    cursor: pointer
+
+
+    color: $white
+    font-family: $font
+    outline: none
+
+    border: none
+
+    padding: 1rem 2rem
+    border-radius: 3rem
+
+    position: relative
+    z-index: 1000
+
+
+.VueCarousel-dot-container
+    margin-top: 0 !important
+

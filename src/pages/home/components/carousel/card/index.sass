@@ -1,0 +1,110 @@
+@import '../../../../../assets/style/index'
+
+.box
+    width: 30rem
+    height: auto
+
+    border-radius: $card_radius
+    padding: 2rem 0
+
+.boxContent
+    padding: 0 2rem
+
+
+.boxInfo
+    display: grid
+    grid-template-columns: 1fr auto
+    grid-gap: 2rem
+
+    > div
+
+        &:nth-child(2)
+            > p
+                color: $grey
+
+        > p
+            font-size: 1.4rem
+
+
+.boxOptions
+    padding-top: 3rem
+    text-align: center
+
+    * p
+        font-size: 1.4rem
+        font-style: italic
+        text-transform: lowercase
+
+    > div
+
+        &:nth-child(2)
+            margin-top: 1rem
+            display: flex
+            justify-content: center
+            align-items: center
+
+            > div
+                $size: 3.5rem
+                width: $size
+                height: $size
+
+                margin-left: 1.5rem
+                border-radius: 50%
+
+                cursor: pointer
+
+                &:nth-child(1)
+                    margin-left: 0
+
+
+.boxImages
+    width: 100%
+
+    padding-top: 85%
+    overflow: hidden
+    position: relative
+
+    > div
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+        margin: auto
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        > img
+            width: 100%
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+
+            &:nth-child(1)
+                z-index: 10
+
+            &:nth-child(2)
+                width: 145%
+                z-index: 20
+                transform: translateY(-53%)
+
+.boxActive
+    margin-top: 1.5rem
+    border-top: .2rem solid $grey_light
+
+.optionActive
+    border: .2rem solid $black
+
+.activeItem
+    border: .1rem solid black
+
+.boxAction
+    width: 100%
+    margin-top: 2rem
+    text-align: center
+
+    > button
+        background: linear-gradient(90deg, rgba(76, 97, 200, 1) 0%, rgba(52, 69, 150, 1) 100%)

@@ -1,0 +1,28 @@
+@import '../../../../assets/style/index'
+
+.box
+  width: 100%
+  height: auto
+  padding-top: 10rem
+  position: fixed
+  top: $header_size
+
+
+.boxContent
+  width: 100%
+  max-width: $max_width
+  min-height: calc(100vh - #{$header_size} * 2)
+  margin: 0 auto
+
+  display: grid
+  grid-template-rows: auto 1fr
+
+  > div
+    //border: .1rem solid red
+    &:nth-child(1)
+      padding-bottom: 5rem
+
+
+
+
+
