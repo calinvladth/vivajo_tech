@@ -13,7 +13,7 @@
     <template v-slot:visual>
       <div :class="$style.visual">
         <img
-            srcset="@/assets/images/Image-Section_4@2x.png 1x, @/assets/images/Image-Section_4@2x.png 2x"
+            srcset="@/assets/images/Image-Section_4.png 1x, @/assets/images/Image-Section_4@2x.png 2x"
             src="@/assets/images/Image-Section_4@2x.png" alt="">
       </div>
     </template>

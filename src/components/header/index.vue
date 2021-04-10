@@ -2,10 +2,13 @@
   <div :class="$style.box" id="overview">
     <div :class="$style.logo">
       <div>
+        <div :class="$style.iconPhone" @click="changeNav()">
+          <IconHamburger/>
+        </div>
         <Logo/>
       </div>
     </div>
-    <div :class="$style.links">
+    <div :class="$style.links" v-if="!nav_active">
       <div>
         <span>{{ link_1[config.lang] }} <span><Arrow/></span></span>
       </div>
@@ -16,7 +19,7 @@
         <span>{{ link_3[config.lang] }} <span><Arrow/></span></span>
       </div>
     </div>
-    <div :class="$style.lang">
+    <div :class="$style.lang" v-if="!nav_active">
       <div>
         <span
             v-for="item in config.lang_options"
@@ -34,10 +37,12 @@
 <script>
 import Logo from '../../assets/icons/logo'
 import Arrow from '../../assets/icons/arrow'
+import IconHamburger from '../../assets/icons/icon_hamburger'
 
 export default {
   data() {
     return {
+      nav_active: false,
       link_1: {
         en: 'FloorPlans',
         de: 'Grundrisse'
@@ -55,6 +60,9 @@ export default {
   methods: {
     changeLang(item) {
       this.$store.dispatch('config/changeLang', item)
+    },
+    changeNav() {
+      this.nav_active = !this.nav_active
     }
   },
   computed: {
@@ -64,7 +72,8 @@ export default {
   },
   components: {
     Logo,
-    Arrow
+    Arrow,
+    IconHamburger
   }
 }
 </script>

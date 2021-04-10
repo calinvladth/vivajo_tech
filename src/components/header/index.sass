@@ -13,6 +13,26 @@
     position: relative
     z-index: 40
 
+    @include sm
+        padding: 0
+        grid-template-columns: 1fr
+        grid-gap: 0
+        z-index: 1000
+
+        > div
+            height: $header_size
+            background-color: $white
+            position: relative
+            padding: 0 1rem
+
+            &:nth-child(1)
+                width: 100%
+                padding: 0
+
+                position: relative
+
+
+
     * span
         font-size: 1.4rem
 
@@ -38,6 +58,9 @@
     display: flex
     justify-content: center
     align-items: center
+
+    @include sm
+        justify-content: flex-start
 
     > div
         border: .1rem solid $grey
@@ -102,3 +125,15 @@
                 height: $size
                 margin-left: .25rem
 
+.iconPhone
+    display: none
+
+    @include sm
+        display: block
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 1rem
+        transform: translateY(-50%)
+        width: 2.5rem
+        height: 2.5rem
