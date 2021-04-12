@@ -20,5 +20,5 @@ text_to_display: {
   'de': 'Some de text'
 }
 
-text[language]
+text_to_display[language]
 ```
