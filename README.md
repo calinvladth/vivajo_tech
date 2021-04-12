@@ -1,24 +1,24 @@
-# vivajo
+# Project documentation
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Layout options section
+The problem I faced in this section was the navigation between 
+layouts. Without the carousel, I had a scroll option, with carousel I did not. 
 
-### Compiles and minifies for production
-```
-yarn build
-```
+I went with the scroll option because I found it easier to navigate through.
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Language support
+The approach I had gives support for multiple languages.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+language: 'en'
+
+language_options: ['en', 'de']
+
+text_to_display: {
+  'en': 'Some en text',
+  'de': 'Some de text'
+}
+
+text[language]
+```
